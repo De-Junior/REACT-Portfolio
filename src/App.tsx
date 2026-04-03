@@ -974,7 +974,7 @@ const Skills: React.FC = () => (
 // ─────────────────────────────────────────────
 const experiencesData = [
   { date: 'APR 2025 – DEC 2025', icon: '💼', role: 'Software Developer Intern', company: 'Sima Digital Agencies', desc: 'Built features with HTML, CSS, JS, PHP, JSON, SQL. Worked in an Agile environment, participated in code reviews and client-facing demos.' },
-  { date: 'COMPLETING 2025', icon: '🎓', role: 'Diploma in IT (NQF6)', company: 'Higher Education Institution', desc: 'Information systems, web development, software engineering & security. Expected graduation May 2026.' },
+  { date: 'COMPLETED 2025', icon: '🎓', role: 'Diploma in IT (NQF6)', company: 'Higher Education Institution', desc: 'Information systems, web development, software engineering & security. Expected graduation May 2026.' },
   { date: '2022', icon: '🏅', role: 'Matric Grade 12 (NQF4)', company: 'Secondary School', desc: 'Built an analytical foundation and problem-solving mindset that underpins everything I do today.' },
 ];
 
