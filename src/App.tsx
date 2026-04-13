@@ -730,7 +730,7 @@ const Hero: React.FC = () => {
             />
             <div style={{ position: 'relative', zIndex: 1, width: '100%', height: '100%', borderRadius: 26, overflow: 'hidden', border: '2px solid var(--bg)' }}>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB01osFAqujqPIpNlO-zPIyywM9ASyNOCRIg&s"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQGdJDBAQZ81bw/profile-displayphoto-scale_400_400/B4DZxCOPR4IwAg-/0/1770637560104?e=2147483647&v=beta&t=Be6uSqna9EowewFnD6rRZzSrnFCrAuEvO4t-OYAgxgg"
                 alt="James Junior Hlungwane - Software Developer Portfolio"
                 loading="eager"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
