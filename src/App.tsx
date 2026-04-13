@@ -730,7 +730,7 @@ const Hero: React.FC = () => {
             />
             <div style={{ position: 'relative', zIndex: 1, width: '100%', height: '100%', borderRadius: 26, overflow: 'hidden', border: '2px solid var(--bg)' }}>
               <img
-                src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/650842716_2336185740234892_3403676168397416168_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=zhRQhQlbZvAQ7kNvwE2yM92&_nc_oc=AdqkaF9Iaro8nE2kgoWTngq_9ykHUZtUDmJXxAkMmLstGy5aNrxEjHWpMrzhM9N9Xu0&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=5dNGN1ygbJCCqfr6Jgtqsg&_nc_ss=7a3a8&oh=00_AfwW7jWf4GBk-FWEZ_Or1INNxftRmwZUxEvIxgt0_VfJnQ&oe=69D017F5"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQGdJDBAQZ81bw/profile-displayphoto-scale_400_400/B4DZxCOPR4IwAg-/0/1770637560104?e=2147483647&v=beta&t=Be6uSqna9EowewFnD6rRZzSrnFCrAuEvO4t-OYAgxgg"
                 alt="James Junior Hlungwane - Software Developer Portfolio"
                 loading="eager"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
