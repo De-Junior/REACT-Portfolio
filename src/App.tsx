@@ -1550,19 +1550,19 @@ const experiencesData: ExperienceEntry[] = [
     company: 'Richfield Graduate Institute of Technology',
     desc: 'Programming, Web Technologies, Databases, Software Development, Software Engineering, Internet Programming.',
   },
+    {
+    date: '2024',
+    icon: '📜',
+    role: 'FNB App Academy Certification',
+    company: 'Full-stack training programme',
+    desc: 'HTML, CSS, JavaScript, PHP, SQL assessed by industry mentors.',
+  },
   {
     date: 'Completed 2022',
     icon: '🏅',
     role: 'National Senior Certificate (Grade 12)',
     company: 'New Era College',
     desc: 'Mathematics, Life Sciences, Agricultural Sciences.',
-  },
-  {
-    date: '2024',
-    icon: '📜',
-    role: 'FNB App Academy Certification',
-    company: 'Full-stack training programme',
-    desc: 'HTML, CSS, JavaScript, PHP, SQL — assessed by industry mentors.',
   },
 ];
 
@@ -2038,7 +2038,7 @@ const DesignSystem: React.FC = () => {
     {
       name: '--surface',
       value: '#fffcf3 / #3a3a3a',
-      desc: 'Card background — 1 step lighter than --bg.',
+      desc: 'Card background 1 step lighter than --bg.',
     },
     {
       name: '--transition',
@@ -2239,7 +2239,7 @@ const Testimonials: React.FC = () => (
       <TiltCard className="torn-paper" style={{ padding: 28, marginTop: 20 }}>
         <blockquote>
           <p style={{ fontFamily: 'var(--font-body)', fontStyle: 'italic', fontSize: '1.1rem' }}>
-            "James brings the precision of a senior engineer and the curiosity of a builder — a rare
+            "James brings the precision of a senior engineer and the curiosity of a builder a rare
             combination."
           </p>
           <footer style={{ marginTop: 16 }}>
@@ -2285,7 +2285,7 @@ const Writing: React.FC = () => (
           "Why Prisma is my ORM of choice"
         </h3>
         <p style={{ color: 'var(--text-muted)', marginTop: 6 }}>
-          A deep dive into type-safe database access — coming to my blog soon.
+          A deep dive into type-safe database access coming to my blog soon.
         </p>
         <div style={{ marginTop: 16 }}>
           <a
