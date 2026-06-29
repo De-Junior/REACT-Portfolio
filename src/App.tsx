@@ -1,6 +1,7 @@
 // App.tsx — James Junior Hlungwane Portfolio
 // "The Handcrafted Journal" — dual-theme notebook / chalkboard
 // Converted to TypeScript with full type safety & lint fixes.
+// Aligned with CV: consistent metrics, added TeamFlow, updated skills.
 
 import React, {
   useEffect,
@@ -130,7 +131,7 @@ function injectSEOMeta(): void {
         'Building production systems with React, Next.js, TypeScript & PostgreSQL. Open to junior full-stack roles.',
     },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://lh3.googleusercontent.com/a/ACg8ocLEnrWt-SqkzM5m2K2oJWA4VRT1y2VonXIn0PValfTuNE8dgtV3fw=s360-c-no' },
+    { property: 'og:url', content: 'https://react-portfolio-black-sigma.vercel.app/' },
     {
       name: 'description',
       content: 'James Junior Hlungwane — Full-Stack Software Engineer based in Pretoria, South Africa.',
@@ -881,8 +882,8 @@ const Hero: React.FC = () => {
               maxWidth: 600,
             }}
           >
-            I build production systems that reduce bugs by 20% and speed up data retrieval by
-            30%. Currently crafting full-stack platforms with Next.js, TypeScript, and
+            I build production systems that improve page load by 23% and reduce frontend defects by
+            15%. Currently crafting full-stack platforms with Next.js, TypeScript, and
             PostgreSQL.
           </motion.p>
 
@@ -954,18 +955,18 @@ const Hero: React.FC = () => {
 };
 
 // ─────────────────────────────────────────────
-// ABOUT
+// ABOUT — aligned with CV metrics
 // ─────────────────────────────────────────────
 const About: React.FC = () => {
   const stats: StatItem[] = [
     { num: 9, label: 'Months Experience', icon: '💼' },
-    { num: 20, label: '% UI Bug Reduction', icon: '🐞' },
-    { num: 30, label: '% Query Improvement', icon: '⚡' },
-    { num: 5, label: 'Volunteer Months', icon: '🤝' },
+    { num: 23, label: '% Page Load Improvement', icon: '⚡' },
+    { num: 15, label: '% Defect Reduction', icon: '🐞' },
+    { num: 2, label: 'SaaS Platforms Shipped', icon: '🚀' },
   ];
 
   const infoItems: InfoItem[] = [
-    { icon: '🎓', label: 'Education', val: 'Diploma in IT NQF6 (Cum Laude)' },
+    { icon: '🎓', label: 'Education', val: 'Diploma in IT NQF6' },
     { icon: '📍', label: 'Location', val: 'Pretoria, South Africa (willing to relocate)' },
     { icon: '✉️', label: 'Email', val: 'Hlungwane.james.junior@gmail.com', href: 'mailto:Hlungwane.james.junior@gmail.com' },
     { icon: '📞', label: 'Phone', val: '072 476 4574', href: 'tel:+27724764574' },
@@ -1005,7 +1006,7 @@ const About: React.FC = () => {
           >
             From a first computer at 7
             <br />
-            to <span style={{ color: 'var(--accent)' }}>Cum Laude</span> graduate.
+            to shipping <span style={{ color: 'var(--accent)' }}>production SaaS</span>.
           </h2>
         </div>
 
@@ -1035,9 +1036,10 @@ const About: React.FC = () => {
                   marginTop: 16,
                 }}
               >
-                At Sima Digital Agencies I contributed to live features, reduced UI bugs by 20%,
-                and optimised MySQL databases in an Agile team. I'm looking for a junior
-                full-stack role where I can grow across the entire web stack.
+                At Sima Digital Agencies I improved page load times by 23% and reduced frontend
+                defect rates by 15% in an Agile team. I independently built and deployed two live
+                SaaS platforms. Looking for a junior full‑stack role to grow across the entire web
+                stack.
               </p>
             </TiltCard>
 
@@ -1129,14 +1131,14 @@ const About: React.FC = () => {
 };
 
 // ─────────────────────────────────────────────
-// HIGHLIGHTS
+// HIGHLIGHTS — matched to CV
 // ─────────────────────────────────────────────
 const Highlights: React.FC = () => {
   const items = [
-    { emoji: '🐞', metric: '-20%', label: 'UI Bug Reduction', detail: 'Across 3 active client projects at Sima Digital.' },
-    { emoji: '⚡', metric: '-30%', label: 'Query Time', detail: 'Optimised MySQL queries for core workflows.' },
-    { emoji: '📦', metric: '5+', label: 'Projects Shipped', detail: 'Including a full-stack developer platform.' },
-    { emoji: '📊', metric: '5M', label: 'Data Points', detail: 'Processed & visualised during volunteer work.' },
+    { emoji: '⚡', metric: '-23%', label: 'Page Load Time', detail: 'Across core application routes at Sima Digital.' },
+    { emoji: '🐞', metric: '-15%', label: 'Defect Rate', detail: 'Frontend bugs resolved in Agile sprints.' },
+    { emoji: '📦', metric: '2', label: 'SaaS Platforms', detail: 'Independently built & deployed to production.' },
+    { emoji: '📊', metric: '5M', label: 'Data Points', detail: 'Processed & visualised in volunteer work.' },
   ];
 
   return (
@@ -1190,7 +1192,7 @@ const Highlights: React.FC = () => {
 };
 
 // ─────────────────────────────────────────────
-// GITHUB STATS (with error UI + retry)
+// GITHUB STATS
 // ─────────────────────────────────────────────
 const GitHubStats: React.FC = () => {
   const [state, setState] = useState<GitHubStatsState>({
@@ -1353,38 +1355,38 @@ const GitHubStats: React.FC = () => {
 };
 
 // ─────────────────────────────────────────────
-// SKILLS
+// SKILLS — expanded to match CV
 // ─────────────────────────────────────────────
 const skillsData: SkillCategory[] = [
   {
-    icon: '🌐',
-    title: 'Web & Frameworks',
-    tags: ['HTML5', 'CSS3', 'JavaScript ES6+', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
+    icon: '🎨',
+    title: 'Frontend & UI',
+    tags: ['React', 'Next.js', 'TypeScript', 'JavaScript ES6+', 'HTML5', 'CSS3', 'Tailwind CSS', 'Shadcn UI', 'TanStack Query', 'Zustand', 'React Hook Form', 'Zod'],
   },
   {
-    icon: '💻',
-    title: 'Languages',
-    tags: ['Python', 'Java', 'Node.js', 'PHP', 'SQL', 'C#'],
+    icon: '⚙️',
+    title: 'Backend & APIs',
+    tags: ['Node.js', 'REST APIs', 'Server Actions', 'Socket.io', 'Redis', 'BullMQ', 'NextAuth', 'JWT', 'OAuth', 'Stripe', 'OpenAI API'],
   },
   {
-    icon: '🧱',
-    title: 'Backend & DB',
-    tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Prisma ORM', 'Supabase', 'REST APIs'],
+    icon: '🗄️',
+    title: 'Databases & ORMs',
+    tags: ['PostgreSQL', 'Prisma ORM', 'Neon', 'Supabase', 'SQL'],
   },
   {
-    icon: '🛠️',
-    title: 'Tools & Methods',
-    tags: ['Git', 'Vercel', 'CI/CD', 'Jest', 'React Testing Library', 'Agile/Scrum'],
+    icon: '☁️',
+    title: 'Cloud & DevOps',
+    tags: ['Vercel', 'AWS S3', 'Docker', 'GitHub Actions', 'CI/CD', 'Sentry'],
   },
   {
-    icon: '📊',
-    title: 'Data & Systems',
-    tags: ['Excel', 'Kumu', 'SDLC', 'OOP', 'System Analysis'],
+    icon: '🧪',
+    title: 'Testing & Quality',
+    tags: ['Vitest', 'Playwright', 'React Testing Library', 'Agile/Scrum'],
   },
   {
-    icon: '🎓',
-    title: 'Certifications',
-    tags: ['FNB App Academy (Full-stack)', 'Cum Laude Diploma NQF6'],
+    icon: '🔐',
+    title: 'Security',
+    tags: ['Helmet', 'Rate Limiting', 'CSRF Protection', 'bcrypt', 'Row Level Security'],
   },
 ];
 
@@ -1526,36 +1528,22 @@ const ContinuousGrowth: React.FC = () => (
 );
 
 // ─────────────────────────────────────────────
-// EXPERIENCE — CSS timeline instead of SVG
+// EXPERIENCE — aligned with CV
 // ─────────────────────────────────────────────
 const experiencesData: ExperienceEntry[] = [
   {
     date: 'Apr 2025 – Dec 2025',
     icon: '💼',
-    role: 'Software Developer Intern',
+    role: 'Software Developer (Work Integrated Learning)',
     company: 'Sima Digital Agencies',
-    desc: 'Developed & maintained responsive web features. Reduced UI bugs by 20% across 3 projects. Optimised MySQL queries improving retrieval time by 30%. Agile team of 5, bi-weekly zero-rollback deployments.',
-  },
-  {
-    date: 'Sep 2024 – Jan 2025',
-    icon: '📊',
-    role: 'Volunteer Data Visualisation Intern',
-    company: 'Tirisano Education Institute',
-    desc: 'Analysed programme data with Excel & built visual reports. Mapped relationships using Kumu, processing 5M+ data points.',
+    desc: 'Designed and implemented production web application features while collaborating within an Agile development team. Improved server-side rendering and database query efficiency, reducing average page load time by 23% across core application routes. Participated in Agile sprints, code reviews, and sprint planning, resolving UI bugs that reduced frontend defect rate by 15%. Built reusable React components with Next.js App Router and TypeScript, consuming REST APIs and integrating PostgreSQL-backed server actions.',
   },
   {
     date: '2022 – 2025',
     icon: '🎓',
-    role: 'Diploma in IT NQF6 (Cum Laude)',
+    role: 'Diploma in IT NQF6',
     company: 'Richfield Graduate Institute of Technology',
     desc: 'Programming, Web Technologies, Databases, Software Development, Software Engineering, Internet Programming.',
-  },
-    {
-    date: '2024',
-    icon: '📜',
-    role: 'FNB App Academy Certification',
-    company: 'Full-stack training programme',
-    desc: 'HTML, CSS, JavaScript, PHP, SQL assessed by industry mentors.',
   },
   {
     date: 'Completed 2022',
@@ -1600,7 +1588,6 @@ const Experience: React.FC = () => (
       </div>
 
       <div style={{ position: 'relative' }}>
-        {/* Dashed vertical line */}
         <div
           aria-hidden="true"
           style={{
@@ -1688,14 +1675,23 @@ const Experience: React.FC = () => (
 );
 
 // ─────────────────────────────────────────────
-// PROJECTS — Flipbook (keyboard only when visible)
+// PROJECTS — updated with TeamFlow & aligned descriptions
 // ─────────────────────────────────────────────
 const projectsData: Project[] = [
   {
+    title: 'TeamFlow — Enterprise Multi‑Tenant SaaS',
+    desc: 'Production‑grade project management platform with organisation‑based workspaces, Kanban boards, role‑based access control, file uploads, audit logging, and analytics dashboards.',
+    icon: '🏢',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth', 'Zod', 'CI/CD'],
+    link: 'https://teamflow-rosy-three.vercel.app',
+    github: 'https://github.com/De-Junior/Teamflow',
+    architecture: 'Multi‑tenant architecture with Row‑Level Security, server actions, Prisma ORM, PostgreSQL, and Vercel deployment.',
+  },
+  {
     title: 'ConnectDevs — Full-Stack Developer Platform',
-    desc: 'A full-stack networking platform where developers create profiles, showcase projects, and connect. Solo project from database schema to deployment.',
+    desc: 'A full-stack networking platform where developers create profiles, showcase projects, and connect. Implemented server-side rendering and optimised API routes using Next.js App Router, reducing initial page load time by 55ms and improving Largest Contentful Paint.',
     icon: '🤝',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'REST APIs'],
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Supabase', 'REST APIs'],
     link: 'https://connect-liart-omega.vercel.app/',
     github: `https://github.com/${GITHUB_USERNAME}/Connect`,
     architecture: 'SSR via Next.js App Router, Prisma ORM with PostgreSQL, full type safety end-to-end.',
@@ -1709,21 +1705,12 @@ const projectsData: Project[] = [
     github: `https://github.com/${GITHUB_USERNAME}/Health-Care`,
     architecture: 'Client-side rendering with vanilla JS, Chart.js for data visualisation, multiple REST API integrations.',
   },
-  {
-    title: 'RealtimeChat — Supabase Real-Time Messenger',
-    desc: 'A full-stack chat app with GitHub OAuth, real-time message delivery via Supabase subscriptions, and presence indicators. Zero page refreshes.',
-    icon: '💬',
-    tags: ['Next.js', 'TypeScript', 'Supabase', 'NextAuth.js', 'Tailwind CSS', 'PostgreSQL'],
-    link: `https://github.com/${GITHUB_USERNAME}`,
-    github: `https://github.com/${GITHUB_USERNAME}`,
-    architecture: 'Next.js App Router + Server Actions, Supabase Realtime channels, Row Level Security, NextAuth for OAuth.',
-  },
 ];
 
 const FlipbookProject: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const sectionRef = useRef<HTMLDivElement>(null);   // ✅ fixed
+  const sectionRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 
   const flip = useCallback(
@@ -1738,7 +1725,6 @@ const FlipbookProject: React.FC = () => {
     []
   );
 
-  // Keyboard navigation only when section is visible
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -2021,7 +2007,7 @@ const Projects: React.FC = () => (
 );
 
 // ─────────────────────────────────────────────
-// DESIGN SYSTEM
+// DESIGN SYSTEM 
 // ─────────────────────────────────────────────
 const DesignSystem: React.FC = () => {
   const tokens: DesignToken[] = [
@@ -2307,7 +2293,7 @@ const Writing: React.FC = () => (
 );
 
 // ─────────────────────────────────────────────
-// CONTACT (with proper network error handling)
+// CONTACT
 // ─────────────────────────────────────────────
 const inputStyle: CSSProperties = {
   width: '100%',
