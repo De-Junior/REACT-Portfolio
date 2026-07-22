@@ -136,7 +136,7 @@ function injectSEOMeta(): void {
       name: 'description',
       content: 'James Junior Hlungwane — Full-Stack Software Engineer based in Pretoria, South Africa.',
     },
-    { name: 'theme-color', content: '#c4450c' },
+    { name: 'theme-color', content: '#5e4d46' },
   ];
 
   metas.forEach(({ property, name, content }) => {
