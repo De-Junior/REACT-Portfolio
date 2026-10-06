@@ -1,195 +1,59 @@
-import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ArrowLink, ButtonLink } from '../components/Links';
+import { profile, summary } from '../content/profile';
 
-import { useTheme } from '../theme/useTheme';
-
-export const Hero: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
-  const { theme } = useTheme();
-  const [imgError, setImgError] = useState(false);
-
+export function Hero() {
   return (
-    <section
-      id="home"
-      ref={containerRef}
-      aria-label="Introduction"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '120px 32px 80px',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      <motion.div style={{ y, maxWidth: 1100, width: '100%', textAlign: 'center', position: 'relative', zIndex: 2 }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30 }}>
-          {/* Polaroid photo */}
-          <motion.div
-            initial={{ rotate: -4, scale: 0.9, opacity: 0 }}
-            animate={{ rotate: -2, scale: 1, opacity: 1 }}
-            transition={{ type: 'spring', stiffness: 150, damping: 20 }}
-            whileHover={{ rotate: 0, scale: 1.02 }}
-            style={{
-              background: theme === 'paper' ? '#fff' : '#555',
-              padding: '16px 16px 40px 16px',
-              boxShadow: '6px 6px 0 rgba(0,0,0,0.15)',
-              border: theme === 'paper' ? '1px solid #ccc' : '1px solid #888',
-              borderRadius: '2px',
-              display: 'inline-block',
-              maxWidth: 260,
-            }}
-          >
-            {!imgError ? (
-              <img
-                src={`${import.meta.env.BASE_URL}james-hlungwane.jpg`}
-                alt="James Junior Hlungwane, Full-Stack Software Engineer"
-                loading="eager"
-                width={228}
-                height={228}
-                onError={() => setImgError(true)}
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  filter: theme === 'chalkboard' ? 'grayscale(0.5) contrast(1.2)' : 'none',
-                }}
-              />
-            ) : (
-              <div
-                style={{
-                  width: '100%',
-                  aspectRatio: '1/1',
-                  background: 'var(--accent)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '3rem',
-                  color: '#fff',
-                }}
-              >
-                JH
-              </div>
-            )}
-            <div
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.3rem',
-                marginTop: 12,
-                color: theme === 'paper' ? '#222' : '#eee',
-                textAlign: 'center',
-                lineHeight: 1.3,
-              }}
-            >
-              James Junior
-              <br />
-              Hlungwane
-            </div>
-          </motion.div>
+    <section aria-labelledby="hero-title" className="page grid gap-14 pt-16 pb-12 md:pt-24 md:pb-16 lg:grid-cols-12 lg:gap-12">
+      <div className="lg:col-span-7" data-reveal>
+        <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3 py-1.5 text-[0.8125rem] text-body">
+          <span className="size-2 rounded-full bg-positive ring-4 ring-positive/15" aria-hidden="true" />
+          {profile.availability}
+        </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.8rem, 7vw, 5rem)',
-              fontWeight: 700,
-              lineHeight: 1.1,
-              color: 'var(--text)',
-              maxWidth: 700,
-              margin: '0 auto',
-            }}
-          >
-            Full‑Stack Software Engineer
-            <br />
-            <span style={{ color: 'var(--accent)' }}>who ships</span>
-          </motion.h1>
+        <h1 id="hero-title" className="mt-8 text-[2.625rem] leading-[1.04] font-semibold tracking-[-0.04em] sm:text-[3.25rem] xl:text-[3.75rem]">
+          {profile.name}
+          <span className="block text-muted">{profile.role}</span>
+        </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '1.1rem',
-              color: 'var(--text-muted)',
-              maxWidth: 600,
-            }}
-          >
-            I build production systems that improve page load by 23% and reduce frontend defects by
-            15%. Currently crafting full-stack platforms with Next.js, TypeScript, and
-            PostgreSQL.
-          </motion.p>
+        <p className="mt-8 max-w-[38ch] text-[1.25rem] leading-snug tracking-[-0.01em] text-ink md:text-[1.375rem]">
+          I build complete products, from the mobile app down to the database rules that keep its data correct.
+        </p>
+        <p className="mt-4 max-w-[56ch] text-[1.0625rem] leading-relaxed">
+          Most recently RouteClub: a ride-sharing platform with an Expo app, an Express and PostgreSQL API, Ozow payments
+          and an operations console, which I run through my company, Route Technologies.
+        </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center' }}
-          >
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              className="sticky-note"
-              style={{ color: 'var(--text)', fontWeight: 600, borderRadius: '2px' }}
-            >
-              📓 See my work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              className="sticky-note"
-              style={{ color: 'var(--text)', fontWeight: 600, borderRadius: '2px' }}
-            >
-              ✉️ Let's talk
-            </motion.a>
-            <motion.a
-              href="/James-Junior-Hlungwane-CV.pdf"
-              download
-              whileHover={{ scale: 1.05 }}
-              className="sticky-note"
-              style={{
-                background: 'var(--accent3)',
-                color: '#fff',
-                fontWeight: 600,
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-              }}
-            >
-              📥 Download CV
-            </motion.a>
-          </motion.div>
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <ButtonLink href="#work" icon="arrowDown">
+            Selected work
+          </ButtonLink>
+          <ButtonLink href={profile.cv} variant="secondary" icon="download" download>
+            Download CV
+          </ButtonLink>
         </div>
 
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8 }}
-          style={{ marginTop: 60 }}
-        >
-          <a
-            href="#about"
-            aria-label="Scroll to About section"
-            style={{
-              display: 'inline-flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              color: 'var(--text-muted)',
-              fontSize: '0.8rem',
-              fontFamily: 'var(--font-accent)',
-            }}
-          >
-            <span>scroll</span>
-            <ChevronDown size={18} />
-          </a>
-        </motion.div>
-      </motion.div>
+        <div className="mt-8 flex gap-6 text-[0.9375rem]">
+          <ArrowLink href={profile.github}>GitHub</ArrowLink>
+          <ArrowLink href={profile.linkedin}>LinkedIn</ArrowLink>
+        </div>
+      </div>
+
+      <aside aria-label="Summary" className="lg:col-span-5 lg:pt-3" data-reveal>
+        <div className="rounded-xl border border-line bg-surface">
+          <div className="flex items-center justify-between border-b border-line px-5 py-3">
+            <p className="label">At a glance</p>
+            <p className="font-mono text-[0.75rem] text-muted">{profile.location}</p>
+          </div>
+          <dl className="divide-y divide-line">
+            {summary.map(({ label, value }) => (
+              <div key={label} className="grid grid-cols-[6.5rem_1fr] gap-4 px-5 py-3.5">
+                <dt className="label pt-0.5">{label}</dt>
+                <dd className="text-[0.9375rem] leading-snug text-ink">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </aside>
     </section>
   );
-};
+}

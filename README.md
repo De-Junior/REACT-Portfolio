@@ -1,44 +1,38 @@
-<div align="center">
-
 # James Junior Hlungwane · Portfolio
 
-**A hand-drawn "sketchbook" portfolio with a paper and a chalkboard theme, built with React 19, TypeScript and Framer Motion.**
+Source for [react-portfolio-black-sigma.vercel.app](https://react-portfolio-black-sigma.vercel.app): case studies of RouteClub, TeamFlow and ConnectDevs, with experience, stack and contact details.
 
-[**Visit the site**](https://react-portfolio-black-sigma.vercel.app) · [Download my CV](https://react-portfolio-black-sigma.vercel.app/James-Junior-Hlungwane-CV.pdf) · [GitHub](https://github.com/De-Junior)
+![The portfolio's opening screen](docs/screenshot.webp)
 
-<img src="docs/screenshot.png" alt="Portfolio hero section" width="860" />
+## Approach
 
-</div>
-
-## Featured work
-
-| Project | What it shows | Links |
-|---|---|---|
-| **TeamFlow** | Multi-tenant SaaS: tenant isolation, role-based access, Kanban, Stripe billing, realtime notifications, tests and CI | [Live demo](https://teamflow-rosy-three.vercel.app) · [Code](https://github.com/De-Junior/Teamflow) |
-| **ConnectDevs** | Developer collaboration platform: Server Actions, applications workflow, messaging, notifications | [Live](https://connect-liart-omega.vercel.app) · [Code](https://github.com/De-Junior/Connect) |
-| **Healthcare Dashboard** | Vanilla JS dashboard with Chart.js visualisations of patient data | [Live](https://de-junior.github.io/Health-Care/) · [Code](https://github.com/De-Junior/Health-Care) |
-
-## About this site
-
-- **Two themes, one source of truth.** Colours, fonts and component styles are CSS variables generated per theme in [`src/theme/globalCss.ts`](src/theme/globalCss.ts); the toggle swaps them at runtime and remembers the choice.
-- **Content as data.** Projects, experience and skills live in [`src/data/`](src/data), so updating the CV never means editing layout code.
-- **Resilient sections.** Each section has its own error boundary, so if the live GitHub stats can't load, the rest of the page still renders.
-- **Accessible and shareable.** Skip link, labelled landmarks, `prefers-reduced-motion` support, and static Open Graph tags so links preview properly on LinkedIn and WhatsApp.
-- **Working contact form** via Formspree.
+- **Content is data.** Everything a recruiter reads lives in `src/content/` (profile, projects, career). Updating the CV means editing typed objects, not layout.
+- **Case studies over cards.** Each project opens with the same header (positioning and facts) and then gets its own composition: phone screens and an architecture diagram for RouteClub, layered browser views for TeamFlow, a denser dark panel for ConnectDevs.
+- **Restraint in the frame.** The palette is near-monochrome so colour comes from the projects. Both light and dark follow the system setting.
+- **No runtime dependencies beyond React.** Motion is CSS plus one `IntersectionObserver`, icons are eight inline paths, and the contact form posts to Formspree with `fetch`. The production bundle is about 74 KB of JavaScript gzipped, most of which is React.
 
 ## Structure
 
 ```
 src/
-├── App.tsx            page composition
-├── sections/          Hero, About, Skills, Experience, Projects, Contact…
-├── components/        Navbar, Footer, TiltCard, cursor, scroll progress, error boundary
-├── data/              projects, experience and skills content
-├── theme/             theme provider, hook and generated global CSS
-├── config.ts          GitHub username and Formspree form ID
-└── types.ts
-public/                CV, photo, favicon and social preview image
+├── App.tsx              page composition
+├── content/             profile, projects and career data
+├── sections/            Hero, Work (one file per case study), Approach, Experience, Stack, About, Contact
+├── components/          small shared pieces: links, frames, fact and decision lists, the RouteClub diagram
+├── hooks/               scroll reveal and active-section tracking
+└── styles.css           design tokens (Tailwind v4 @theme), base styles, reveal motion
+public/
+├── work/                project screenshots (WebP, sized to avoid layout shift)
+└── og-image.png         link preview image
 ```
+
+## Accessibility and performance
+
+- One `h1`, ordered headings, landmark labels, and a skip link.
+- Visible focus rings, an Escape-closable mobile menu that returns focus, and touch targets of at least 24 px.
+- `prefers-reduced-motion` disables reveals and smooth scrolling.
+- Geist is self-hosted through Fontsource, so there is no third-party font request; only the Latin subset loads.
+- Every image has explicit dimensions and loads lazily below the fold.
 
 ## Running locally
 
@@ -49,8 +43,8 @@ npm run build      # typecheck and production build
 npm run lint
 ```
 
-Optionally set `VITE_FORMSPREE_ID` in `.env` to send the contact form to your own Formspree inbox.
+Set `VITE_FORMSPREE_ID` in `.env` to send the contact form to a different Formspree inbox.
 
 ## Tech
 
-React 19 · TypeScript · Vite · Framer Motion · Formspree · Tailwind CSS (base reset) · Vercel
+React 19, TypeScript, Vite, Tailwind CSS 4, Fontsource (Geist), Vercel.
