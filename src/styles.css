@@ -1,0 +1,174 @@
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+@import "tailwindcss";
+
+/*
+ * Design tokens. The palette is deliberately near-monochrome: colour on this
+ * site comes from the projects themselves, so the frame stays out of the way.
+ * Both schemes follow the visitor's system setting.
+ */
+:root {
+  color-scheme: light;
+  --canvas: #fafaf9;
+  --surface: #ffffff;
+  --subtle: #f2f2f0;
+  --ink: #111113;
+  --body: #3d3d43;
+  --muted: #6e6e76;
+  --line: #e4e4e1;
+  --line-strong: #cfcfcb;
+  --accent: #2547d0;
+  --positive: #15803d;
+  --danger: #b42318;
+
+  --routeclub: #1a45f0;
+  --routeclub-tint: #eef2ff;
+  --teamflow: #4f46e5;
+  --teamflow-tint: #f3f2ee;
+  --connectdevs-tint: #0d0d12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --canvas: #0b0b0d;
+    --surface: #121215;
+    --subtle: #18181b;
+    --ink: #f4f4f5;
+    --body: #c7c7cd;
+    --muted: #8e8e97;
+    --line: #232328;
+    --line-strong: #34343b;
+    --accent: #8ba4ff;
+    --positive: #4ade80;
+    --danger: #f97066;
+
+    --routeclub-tint: #10172e;
+    --teamflow-tint: #161619;
+    --connectdevs-tint: #060609;
+  }
+}
+
+@theme inline {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-subtle: var(--subtle);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-positive: var(--positive);
+  --color-danger: var(--danger);
+  --color-routeclub: var(--routeclub);
+  --color-routeclub-tint: var(--routeclub-tint);
+  --color-teamflow: var(--teamflow);
+  --color-teamflow-tint: var(--teamflow-tint);
+  --color-connectdevs-tint: var(--connectdevs-tint);
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Page width and gutters, shared by every section. */
+@utility page {
+  width: 100%;
+  max-width: 74rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Small uppercase monospace label used for metadata and section markers. */
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@layer base {
+  html {
+    background: var(--canvas);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--canvas);
+    color: var(--body);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--canvas);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/*
+ * Scroll reveal: elements marked data-reveal fade up once when they enter the
+ * viewport (see useScrollReveal). Motion is skipped entirely when the visitor
+ * prefers reduced motion.
+ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 700ms var(--ease-out-quint),
+    transform 700ms var(--ease-out-quint);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

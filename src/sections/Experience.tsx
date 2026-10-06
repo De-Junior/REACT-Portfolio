@@ -1,124 +1,48 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { SectionHeading } from '../components/SectionHeading';
+import { education, roles } from '../content/career';
 
-import { experiencesData } from '../data/experience';
+export function Experience() {
+  return (
+    <section aria-labelledby="experience" className="page py-20 md:py-28">
+      <SectionHeading id="experience" marker="Experience" title="Where the experience comes from" />
 
-export const Experience: React.FC = () => (
-  <section
-    id="experience"
-    aria-labelledby="experience-heading"
-    style={{ padding: '120px 32px', background: 'var(--surface-alt)' }}
-  >
-    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-      <div style={{ marginBottom: 60 }}>
-        <span
-          style={{
-            fontFamily: 'var(--font-accent)',
-            fontSize: '1rem',
-            color: 'var(--accent)',
-            display: 'block',
-            marginBottom: 8,
-          }}
-        >
-          📅 the journey so far
-        </span>
-        <h2
-          id="experience-heading"
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(2.5rem, 5vw, 3.8rem)',
-            fontWeight: 700,
-            lineHeight: 1.2,
-            color: 'var(--text)',
-          }}
-        >
-          Experience & <span style={{ color: 'var(--accent)' }}>education</span>.
-        </h2>
-      </div>
+      <ol className="mt-16 divide-y divide-line border-y border-line">
+        {roles.map((role) => (
+          <li key={role.organisation} className="grid gap-4 py-8 md:grid-cols-12 md:gap-8 md:py-10" data-reveal>
+            <p className="font-mono text-[0.8125rem] text-muted tabular-nums md:col-span-3 md:pt-1">{role.period}</p>
+            <div className="md:col-span-9">
+              <h3 className="text-[1.1875rem] leading-snug font-medium">
+                {role.title}
+                <span className="text-muted"> · {role.organisation}</span>
+              </h3>
+              <p className="mt-2 max-w-[62ch] text-[0.9375rem] leading-relaxed">{role.summary}</p>
+              <ul className="mt-4 max-w-[66ch] space-y-2">
+                {role.highlights.map((highlight) => (
+                  <li key={highlight} className="relative pl-5 text-[0.9375rem] leading-relaxed">
+                    <span className="absolute top-[0.7em] left-0 h-px w-2.5 bg-line-strong" aria-hidden="true" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
 
-      <div style={{ position: 'relative' }}>
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            left: 28,
-            top: 0,
-            bottom: 0,
-            width: 0,
-            borderLeft: '3px dashed var(--accent)',
-          }}
-        />
-
-        <ol style={{ listStyle: 'none', padding: 0 }}>
-          {experiencesData.map((exp, i) => (
-            <motion.li
-              key={exp.role}
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'auto 1fr',
-                gap: 24,
-                marginBottom: 48,
-                position: 'relative',
-                zIndex: 1,
-              }}
-            >
-              <div
-                style={{
-                  width: 56,
-                  height: 56,
-                  borderRadius: '50%',
-                  background: 'var(--surface)',
-                  border: '3px dashed var(--accent)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.6rem',
-                }}
-                aria-hidden="true"
-              >
-                {exp.icon}
-              </div>
-              <motion.div
-                whileHover={{ borderColor: 'var(--accent)' }}
-                className="torn-paper"
-                style={{ padding: 24 }}
-              >
-                <div
-                  style={{
-                    fontFamily: 'var(--font-accent)',
-                    fontSize: '0.75rem',
-                    color: 'var(--accent)',
-                    marginBottom: 8,
-                  }}
-                >
-                  {exp.date}
-                </div>
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 700 }}>
-                  {exp.role}
-                </h3>
-                <div
-                  style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--text-muted)',
-                    marginBottom: 12,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 8,
-                  }}
-                >
-                  <span className="hand-drawn-line" style={{ width: 30 }} aria-hidden="true" />
-                  {exp.company}
-                </div>
-                <p style={{ color: 'var(--text)', lineHeight: 1.7 }}>{exp.desc}</p>
-              </motion.div>
-            </motion.li>
+      <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8" data-reveal>
+        <h3 className="label md:col-span-3 md:pt-1">Education</h3>
+        <ul className="grid gap-6 sm:grid-cols-2 md:col-span-9">
+          {education.map((item) => (
+            <li key={item.name}>
+              <p className="text-[1rem] font-medium text-ink">{item.name}</p>
+              <p className="mt-1 text-[0.9375rem]">
+                {item.detail}
+                <span className="text-muted"> · {item.year}</span>
+              </p>
+            </li>
           ))}
-        </ol>
+        </ul>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+}
