@@ -9,8 +9,14 @@ export function Contact() {
       <div className="page grid gap-16 py-20 md:py-28 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-6" data-reveal>
           <p className="label">Contact</p>
-          <h2 id="contact" className="mt-5 text-[2rem] leading-[1.1] font-semibold tracking-[-0.015em] md:text-[2.5rem]">
-            Hiring for a full‑stack role? I’d like to hear about it.
+          <h2
+            id="contact"
+            className="mt-5 text-[2rem] leading-[1.1] font-semibold tracking-[-0.015em] md:text-[2.5rem]"
+          >
+            <span className="block text-balance">
+              Hiring for a <span className="whitespace-nowrap">full-stack</span> role?
+            </span>
+            <span className="block text-balance">I’d like to hear about it.</span>
           </h2>
           <p className="mt-5 max-w-[48ch] text-[1.0625rem] leading-relaxed">
             I’m open to full-stack engineering roles in South Africa or remote. Email is the quickest way to reach me.
