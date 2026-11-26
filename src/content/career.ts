@@ -28,12 +28,12 @@ export const education: { name: string; detail: string; year: string }[] = [
 
 /** Grouped by what the tools are used for, each with where it was actually used. */
 export const capabilities: { area: string; tools: string; usedIn: string }[] = [
-  { area: 'Frontend', tools: 'TypeScript, React, Next.js, Tailwind CSS', usedIn: 'TeamFlow, ConnectDevs, RouteClub console' },
-  { area: 'Mobile', tools: 'React Native, Expo, EAS builds, push notifications', usedIn: 'RouteClub app' },
-  { area: 'Backend', tools: 'Node.js, Express, Next.js route handlers and Server Actions, Zod', usedIn: 'RouteClub API, TeamFlow, ConnectDevs' },
-  { area: 'Data', tools: 'PostgreSQL, Prisma, Supabase, Neon', usedIn: 'Every project above' },
-  { area: 'Integrations', tools: 'Ozow, Stripe, Twilio, Resend, Firebase, Pusher', usedIn: 'Payments, messaging and notifications' },
-  { area: 'Delivery', tools: 'GitHub Actions, Vercel, Railway, Sentry, Vitest', usedIn: 'CI and hosting for all projects' },
+  { area: 'Primary stack', tools: 'TypeScript, JavaScript, React, React Native, Expo, Next.js, Node.js, Express', usedIn: 'RouteClub, TeamFlow' },
+  { area: 'Backend and data', tools: 'REST APIs, PostgreSQL, SQL Server, Prisma ORM, Entity Framework Core, Supabase', usedIn: 'RouteClub API, TeamFlow, Staybnb' },
+  { area: 'Mobile', tools: 'React Navigation, EAS Build, EAS Update, Google Maps and Routes APIs, background location, push notifications', usedIn: 'RouteClub app' },
+  { area: 'Security and integrations', tools: 'JWT, bcrypt, role-based access control, rate limiting, Ozow, Stripe, Resend, SMSPortal, Google Gemini, Firebase Cloud Messaging, Apple Push Notification service', usedIn: 'RouteClub, TeamFlow' },
+  { area: 'Also used', tools: 'C#, ASP.NET Core MVC, Razor, Firebase Realtime Database, Redis, Pusher', usedIn: 'Staybnb, RouteClub, TeamFlow' },
+  { area: 'Testing and delivery', tools: 'Jest, Vitest, React Native Testing Library, Git, GitHub Actions, Vercel, Railway, Azure, Sentry', usedIn: 'CI and hosting across all projects' },
 ];
 
 export const principles: { title: string; body: string; evidence: string }[] = [

@@ -1,5 +1,9 @@
-@import "@fontsource-variable/geist";
-@import "@fontsource-variable/geist-mono";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-sans/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
 @import "tailwindcss";
 
 /*
@@ -25,7 +29,6 @@
   --routeclub-tint: #e8eeff;
   --teamflow: #4f46e5;
   --teamflow-tint: #f0f2fa;
-  --connectdevs-tint: #071a33;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,13 +49,12 @@
     --routeclub: #4d7bff;
     --routeclub-tint: #0b2342;
     --teamflow-tint: #0b1b33;
-    --connectdevs-tint: #030a15;
   }
 }
 
 @theme inline {
-  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
   --color-canvas: var(--canvas);
   --color-surface: var(--surface);
@@ -69,7 +71,6 @@
   --color-routeclub-tint: var(--routeclub-tint);
   --color-teamflow: var(--teamflow);
   --color-teamflow-tint: var(--teamflow-tint);
-  --color-connectdevs-tint: var(--connectdevs-tint);
 
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -107,7 +108,6 @@
     background: var(--canvas);
     color: var(--body);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -10,7 +10,7 @@ export function Hero() {
           {profile.availability}
         </p>
 
-        <h1 id="hero-title" className="mt-8 text-[2.625rem] leading-[1.04] font-semibold tracking-[-0.04em] sm:text-[3.25rem] xl:text-[3.75rem]">
+        <h1 id="hero-title" className="mt-8 text-[2.625rem] leading-[1.04] font-semibold tracking-[-0.02em] sm:text-[3.25rem] xl:text-[3.75rem]">
           {profile.name}
           <span className="block text-muted">{profile.role}</span>
         </h1>

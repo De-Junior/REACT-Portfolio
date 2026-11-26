@@ -1,13 +1,13 @@
 # James Junior Hlungwane · Portfolio
 
-Source for [react-portfolio-black-sigma.vercel.app](https://react-portfolio-black-sigma.vercel.app): case studies of RouteClub, TeamFlow and ConnectDevs, with experience, stack and contact details.
+Source for [react-portfolio-black-sigma.vercel.app](https://react-portfolio-black-sigma.vercel.app): case studies of RouteClub and TeamFlow, with experience, stack and contact details.
 
 ![The portfolio's opening screen](docs/screenshot.webp)
 
 ## Approach
 
 - **Content is data.** Everything a recruiter reads lives in `src/content/` (profile, projects, career). Updating the CV means editing typed objects, not layout.
-- **Case studies over cards.** Each project opens with the same header (positioning and facts) and then gets its own composition: phone screens and an architecture diagram for RouteClub, layered browser views for TeamFlow, a denser dark panel for ConnectDevs.
+- **Case studies over cards.** Each project opens with the same header (positioning and facts) and then gets its own composition: phone screens and an architecture diagram for RouteClub, layered browser views for TeamFlow.
 - **Restraint in the frame.** The palette is near-monochrome so colour comes from the projects. Both light and dark follow the system setting.
 - **No runtime dependencies beyond React.** Motion is CSS plus one `IntersectionObserver`, icons are eight inline paths, and the contact form posts to Formspree with `fetch`. The production bundle is about 74 KB of JavaScript gzipped, most of which is React.
 

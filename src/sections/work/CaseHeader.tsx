@@ -9,7 +9,7 @@ export function CaseHeader({ project, index }: { project: CaseStudy; index: numb
         <p className="label">
           {String(index).padStart(2, '0')} · {project.kind}
         </p>
-        <h3 id={`${project.id}-title`} className="mt-4 text-[2.25rem] leading-[1.05] font-semibold tracking-[-0.035em] md:text-[3rem]">
+        <h3 id={`${project.id}-title`} className="mt-4 text-[2.25rem] leading-[1.05] font-semibold tracking-[-0.02em] md:text-[3rem]">
           {project.name}
         </h3>
         <p className="mt-3 text-[1.1875rem] leading-snug tracking-[-0.01em] text-ink md:text-[1.25rem]">{project.tagline}</p>

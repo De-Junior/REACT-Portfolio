@@ -32,7 +32,7 @@ export function RouteClubCase() {
           ))}
         </div>
         <figcaption className="relative border-t border-routeclub/10 bg-routeclub-tint px-6 py-4 text-[0.8125rem] text-muted md:px-10">
-          Screens from the Android app, captured with demo accounts.
+          Screens from the RouteClub app, captured with demo accounts.
         </figcaption>
       </figure>
 

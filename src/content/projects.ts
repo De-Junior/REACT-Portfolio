@@ -45,7 +45,7 @@ export const routeClub: CaseStudy & {
       body: 'A 47-table PostgreSQL schema on Supabase, private storage for identity documents, and nightly backups that are restored after each run to prove they work.',
     },
     {
-      title: 'Operations console',
+      title: 'Admin dashboard',
       body: 'A Next.js console for verifications, payments and refunds, safety reports, SOS events, fares and places, with administrator access approved by a super admin.',
     },
   ],
@@ -120,31 +120,6 @@ export const teamFlow: CaseStudy = {
     { label: 'Live demo', href: 'https://teamflow-rosy-three.vercel.app' },
     { label: 'Source', href: 'https://github.com/De-Junior/Teamflow' },
   ],
-};
-
-export const connectDevs: CaseStudy = {
-  id: 'connectdevs',
-  name: 'ConnectDevs',
-  kind: 'Platform',
-  tagline: 'Project collaboration for developers',
-  summary:
-    'Developers post side projects, apply to join teams and coordinate through direct messages and notifications. Owners review applications, and everyone can follow the people whose work they want to keep up with.',
-  facts: [
-    { label: 'Type', value: 'Personal project' },
-    { label: 'Stack', value: 'Next.js Server Actions, Prisma, PostgreSQL' },
-    { label: 'Status', value: 'Live' },
-  ],
-  decisions: [
-    {
-      title: 'Thin actions over a data layer',
-      body: 'Server Actions validate input with Zod and check ownership, then call a data layer that owns every query. Business rules sit in one place instead of spreading across pages.',
-    },
-    {
-      title: 'Public shapes by default',
-      body: 'Shared select shapes keep private fields such as email addresses out of public responses, and a test fails if one is added back.',
-    },
-  ],
-  links: [{ label: 'Live site', href: 'https://connect-liart-omega.vercel.app' }],
 };
 
 export const otherWork: { name: string; description: string; stack: string; links: Link[] }[] = [

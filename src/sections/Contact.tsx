@@ -9,7 +9,7 @@ export function Contact() {
       <div className="page grid gap-16 py-20 md:py-28 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-6" data-reveal>
           <p className="label">Contact</p>
-          <h2 id="contact" className="mt-5 text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] md:text-[2.5rem]">
+          <h2 id="contact" className="mt-5 text-[2rem] leading-[1.1] font-semibold tracking-[-0.015em] md:text-[2.5rem]">
             Hiring for a full‑stack role? I’d like to hear about it.
           </h2>
           <p className="mt-5 max-w-[48ch] text-[1.0625rem] leading-relaxed">
