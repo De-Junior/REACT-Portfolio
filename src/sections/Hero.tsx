@@ -12,7 +12,11 @@ export function Hero() {
 
         <h1 id="hero-title" className="mt-8 text-[2.625rem] leading-[1.04] font-semibold tracking-[-0.02em] sm:text-[3.25rem] xl:text-[3.75rem]">
           {profile.name}
-          <span className="block text-muted">{profile.role}</span>
+          <span className="block text-balance text-muted">
+            {profile.role.split('Full-Stack').flatMap((part, i) =>
+              i === 0 ? [part] : [<span key={i} className="whitespace-nowrap">Full-Stack</span>, part],
+            )}
+          </span>
         </h1>
 
         <p className="mt-8 max-w-[44ch] text-[1.25rem] leading-snug tracking-[-0.01em] text-ink md:text-[1.375rem]">
