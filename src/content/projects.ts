@@ -148,3 +148,72 @@ export const otherWork: { name: string; description: string; stack: string; link
     ],
   },
 ];
+
+export type FeaturedProject = {
+  id: string;
+  name: string;
+  kind: string;
+  tagline: string;
+  description: string;
+  stack: string[];
+  image: string;
+  alt: string;
+  /** Phone screenshots sit contained on a tint; browser screenshots fill the frame from the top. */
+  fit: 'contain' | 'cover';
+  links: Link[];
+  note?: string;
+};
+
+/** Order matters: the first two render larger. Everything here comes from the CV and the case-study data above. */
+export const featured: FeaturedProject[] = [
+  {
+    id: 'routeclub',
+    name: 'RouteClub',
+    kind: 'Product',
+    tagline: 'Long-distance ride sharing between Limpopo and Gauteng',
+    description:
+      'Drivers post trips with their own pickup points and fares, and riders search for their segment and book a seat. Built end to end as sole developer, and live on Google Play and the App Store with 150 registered users.',
+    stack: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Next.js'],
+    image: '/work/routeclub/search-results.webp',
+    alt: 'RouteClub app showing trip search results between Giyani and Johannesburg',
+    fit: 'contain',
+    links: [
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.routeclub.app' },
+      { label: 'App Store', href: 'https://apps.apple.com/app/id6819725675' },
+      { label: 'Website', href: 'https://routetechnologies.co.za/routeclub/' },
+    ],
+    note: 'Private repository',
+  },
+  {
+    id: 'teamflow',
+    name: 'TeamFlow',
+    kind: 'SaaS',
+    tagline: 'Multi-tenant project management',
+    description:
+      'Organisations get isolated workspaces with projects, a drag-and-drop Kanban board, tasks, analytics and subscription billing, with role-based permissions enforced on the server.',
+    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth', 'Stripe', 'Pusher'],
+    image: '/work/teamflow/kanban.webp',
+    alt: 'TeamFlow project board with tasks in Backlog, To do, In progress and Review columns',
+    fit: 'cover',
+    links: [
+      { label: 'Live demo', href: 'https://teamflow-rosy-three.vercel.app' },
+      { label: 'GitHub', href: 'https://github.com/De-Junior/Teamflow' },
+    ],
+  },
+  {
+    id: 'staybnb',
+    name: 'Staybnb',
+    kind: 'Booking platform',
+    tagline: 'Property rental platform',
+    description:
+      'An Airbnb-style platform with role-based accounts for guests, hosts and administrators, a booking engine that blocks overlapping stays, host approval workflows and a private multi-step guest check-in. Deployed on Azure.',
+    stack: ['C#', 'ASP.NET Core MVC', 'Entity Framework Core', 'SQL Server', 'Azure'],
+    image: '/work/staybnb/home.jpg',
+    alt: 'Staybnb home page listing rental properties in Durban',
+    fit: 'cover',
+    links: [
+      { label: 'Live demo', href: 'https://staybnb-4hv0z.azurewebsites.net/' },
+      { label: 'GitHub', href: 'https://github.com/De-Junior/Staybnb' },
+    ],
+  },
+];

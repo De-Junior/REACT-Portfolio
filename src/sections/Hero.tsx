@@ -15,17 +15,17 @@ export function Hero() {
           <span className="block text-muted">{profile.role}</span>
         </h1>
 
-        <p className="mt-8 max-w-[38ch] text-[1.25rem] leading-snug tracking-[-0.01em] text-ink md:text-[1.375rem]">
-          I build complete products, from the mobile app down to the database rules that keep its data correct.
+        <p className="mt-8 max-w-[44ch] text-[1.25rem] leading-snug tracking-[-0.01em] text-ink md:text-[1.375rem]">
+          I build mobile and web applications end to end with React, React Native, Node.js and PostgreSQL.
         </p>
         <p className="mt-4 max-w-[56ch] text-[1.0625rem] leading-relaxed">
-          Most recently RouteClub: a ride-sharing app live on Google Play and the App Store, with an Expo app, an Express
-          and PostgreSQL API, Ozow payments and an admin dashboard, which I run through my company, Route Technologies.
+          My latest project, RouteClub, is a ride-sharing app live on Google Play and the App Store, built as sole
+          developer and run through my company, Route Technologies.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <ButtonLink href="#work" icon="arrowDown">
-            Selected work
+            View Projects
           </ButtonLink>
           <ButtonLink href={profile.cv} variant="secondary" icon="download" download>
             Download CV

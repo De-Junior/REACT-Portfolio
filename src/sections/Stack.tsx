@@ -4,7 +4,7 @@ import { capabilities } from '../content/career';
 export function Stack() {
   return (
     <section aria-labelledby="stack" className="page pb-20 md:pb-28">
-      <SectionHeading id="stack" marker="Stack" title="Tools I use, and where I’ve used them">
+      <SectionHeading id="stack" marker="Skills" title="Technical skills">
         <p>Grouped by what they’re for. Everything listed is used in the projects above.</p>
       </SectionHeading>
 

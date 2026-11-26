@@ -1,6 +1,6 @@
 export const profile = {
   name: 'James Junior Hlungwane',
-  role: 'Junior full-stack and React Native developer',
+  role: 'Full-Stack Software Engineer',
   location: 'Giyani, South Africa',
   availability: 'Open to junior full-stack and React Native roles',
   email: 'hlungwane.james.junior@gmail.com',

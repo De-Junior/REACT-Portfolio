@@ -4,10 +4,10 @@ import { profile } from '../content/profile';
 import { useActiveSection } from '../hooks/useActiveSection';
 
 const navItems = [
-  { id: 'work', label: 'Work' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'stack', label: 'Stack' },
   { id: 'about', label: 'About' },
+  { id: 'work', label: 'Projects' },
+  { id: 'stack', label: 'Skills' },
+  { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ] as const;
 

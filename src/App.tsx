@@ -1,6 +1,5 @@
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { About } from './sections/About';
-import { Approach } from './sections/Approach';
 import { Contact } from './sections/Contact';
 import { Experience } from './sections/Experience';
 import { Hero } from './sections/Hero';
@@ -24,11 +23,10 @@ export default function App() {
       <main id="main">
         <span id="top" />
         <Hero />
-        <Work />
-        <Approach />
-        <Experience />
-        <Stack />
         <About />
+        <Work />
+        <Stack />
+        <Experience />
         <Contact />
       </main>
       <SiteFooter />
