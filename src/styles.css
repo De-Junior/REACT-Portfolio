@@ -3,49 +3,50 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. The palette is deliberately near-monochrome: colour on this
- * site comes from the projects themselves, so the frame stays out of the way.
- * Both schemes follow the visitor's system setting.
+ * Design tokens, themed on the RouteClub brand: deep navy (#071A33), brand
+ * blue (#1248F5) and light blue (#6FA3FF). Both schemes follow the visitor's
+ * system setting.
  */
 :root {
   color-scheme: light;
-  --canvas: #fafaf9;
+  --canvas: #f6f8fd;
   --surface: #ffffff;
-  --subtle: #f2f2f0;
-  --ink: #111113;
-  --body: #3d3d43;
-  --muted: #6e6e76;
-  --line: #e4e4e1;
-  --line-strong: #cfcfcb;
-  --accent: #2547d0;
+  --subtle: #edf1fa;
+  --ink: #071a33;
+  --body: #34435f;
+  --muted: #66758f;
+  --line: #dfe5f2;
+  --line-strong: #c7d1e6;
+  --accent: #1248f5;
   --positive: #15803d;
   --danger: #b42318;
 
-  --routeclub: #1a45f0;
-  --routeclub-tint: #eef2ff;
+  --routeclub: #1248f5;
+  --routeclub-tint: #e8eeff;
   --teamflow: #4f46e5;
-  --teamflow-tint: #f3f2ee;
-  --connectdevs-tint: #0d0d12;
+  --teamflow-tint: #f0f2fa;
+  --connectdevs-tint: #071a33;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --canvas: #0b0b0d;
-    --surface: #121215;
-    --subtle: #18181b;
-    --ink: #f4f4f5;
-    --body: #c7c7cd;
-    --muted: #8e8e97;
-    --line: #232328;
-    --line-strong: #34343b;
-    --accent: #8ba4ff;
+    --canvas: #040e1d;
+    --surface: #071a33;
+    --subtle: #0b2342;
+    --ink: #f2f6ff;
+    --body: #c3cfe6;
+    --muted: #8a9bb9;
+    --line: #14294a;
+    --line-strong: #1f3a63;
+    --accent: #6fa3ff;
     --positive: #4ade80;
     --danger: #f97066;
 
-    --routeclub-tint: #10172e;
-    --teamflow-tint: #161619;
-    --connectdevs-tint: #060609;
+    --routeclub: #4d7bff;
+    --routeclub-tint: #0b2342;
+    --teamflow-tint: #0b1b33;
+    --connectdevs-tint: #030a15;
   }
 }
 
@@ -125,8 +126,8 @@
   }
 
   ::selection {
-    background: var(--ink);
-    color: var(--canvas);
+    background: var(--accent);
+    color: #ffffff;
   }
 
   :focus-visible {

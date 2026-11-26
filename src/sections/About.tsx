@@ -21,15 +21,15 @@ export function About() {
           </div>
           <div className="max-w-[62ch] space-y-5 text-[1.0625rem] leading-relaxed md:col-span-9">
             <p>
-              I’m a full-stack engineer based in Pretoria. My first production work was a nine-month placement at Sima
-              Digital Agencies, building features for client web applications in an Agile team. In 2026 I registered
-              Route Technologies and built RouteClub, which taught me most of what I know about payments, data integrity
-              and keeping software running.
+              I’m an IT graduate and junior full-stack and React Native developer based in Giyani. In 2026 I registered
+              Route Technologies and built RouteClub on my own, from the mobile app to the API, database and admin
+              dashboard. It’s live on Google Play and the App Store, and building it taught me most of what I know about
+              payments, data integrity and keeping software running.
             </p>
             <p>
               I do my best work where product and infrastructure meet: modelling a domain carefully, designing the API
-              around it, and making sure the system behaves when an integration doesn’t. I’m looking for a full-stack
-              role on a team that ships reliable software and reviews its work closely.
+              around it, and making sure the system behaves when an integration doesn’t. I’m looking for a junior
+              full-stack or React Native role on a team that ships reliable software and reviews its work closely.
             </p>
           </div>
         </div>

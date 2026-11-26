@@ -24,11 +24,11 @@ export const routeClub: CaseStudy & {
   kind: 'Product',
   tagline: 'Long-distance ride sharing between Limpopo and Gauteng',
   summary:
-    'Drivers post trips along the Giyani, Malamulele, Pretoria and Johannesburg corridor with their own pickup points and fares. Riders search for their segment, book a seat and pay in the app. I designed and built the whole system and run it through my company, Route Technologies.',
+    'Drivers post trips along the Giyani, Malamulele, Pretoria and Johannesburg corridor with their own pickup points and fares. Riders search for their segment, book a seat and pay the booking fee in the app. I designed and built the whole system as its sole developer, and run it through my company, Route Technologies.',
   facts: [
-    { label: 'Role', value: 'Founder and engineer' },
+    { label: 'Role', value: 'Sole developer, Director & Software Engineer' },
     { label: 'Company', value: 'Route Technologies (Pty) Ltd' },
-    { label: 'Platforms', value: 'Android app, operations console, website' },
+    { label: 'Platforms', value: 'Android and iOS app, admin dashboard, website' },
     { label: 'Stack', value: 'Expo, Express, Prisma, PostgreSQL' },
   ],
   parts: [
@@ -72,11 +72,13 @@ export const routeClub: CaseStudy & {
     },
   ],
   status: [
-    { label: 'Android', value: 'Internal testing on Google Play' },
-    { label: 'iOS', value: 'Not yet released' },
-    { label: 'Payments', value: 'Ozow integration built, live verification in progress' },
+    { label: 'Android', value: 'Live on Google Play' },
+    { label: 'iOS', value: 'Live on the App Store' },
+    { label: 'Users', value: '150 registered users since the first release on 15 October 2026' },
   ],
   links: [
+    { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.routeclub.app' },
+    { label: 'App Store', href: 'https://apps.apple.com/app/id6819725675' },
     { label: 'Product page', href: 'https://routetechnologies.co.za/routeclub/' },
     { label: 'Route Technologies', href: 'https://routetechnologies.co.za/' },
   ],
@@ -146,6 +148,15 @@ export const connectDevs: CaseStudy = {
 };
 
 export const otherWork: { name: string; description: string; stack: string; links: Link[] }[] = [
+  {
+    name: 'Staybnb',
+    description: 'Airbnb-style rental platform with role-based accounts, a booking engine that blocks overlapping stays, host approval workflows and a private multi-step guest check-in. Deployed on Azure.',
+    stack: 'C#, ASP.NET Core MVC, Entity Framework Core, SQL Server, Azure',
+    links: [
+      { label: 'Live demo', href: 'https://staybnb-4hv0z.azurewebsites.net/' },
+      { label: 'Source', href: 'https://github.com/De-Junior/Staybnb' },
+    ],
+  },
   {
     name: 'Route Technologies website',
     description: 'Company site for Route Technologies and RouteClub, with legal pages and an enquiry form wired to the RouteClub API.',

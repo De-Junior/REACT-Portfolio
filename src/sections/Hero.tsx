@@ -19,8 +19,8 @@ export function Hero() {
           I build complete products, from the mobile app down to the database rules that keep its data correct.
         </p>
         <p className="mt-4 max-w-[56ch] text-[1.0625rem] leading-relaxed">
-          Most recently RouteClub: a ride-sharing platform with an Expo app, an Express and PostgreSQL API, Ozow payments
-          and an operations console, which I run through my company, Route Technologies.
+          Most recently RouteClub: a ride-sharing app live on Google Play and the App Store, with an Expo app, an Express
+          and PostgreSQL API, Ozow payments and an admin dashboard, which I run through my company, Route Technologies.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">

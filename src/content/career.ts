@@ -9,37 +9,21 @@ export type Role = {
 export const roles: Role[] = [
   {
     organisation: 'Route Technologies (Pty) Ltd',
-    title: 'Founder and software engineer',
-    period: '2026 – present',
-    summary: 'Building and operating RouteClub, a ride-sharing product for the Limpopo to Gauteng corridor.',
+    title: 'Director & Software Engineer',
+    period: 'August 2026 – present',
+    summary: 'Sole developer of RouteClub, a long-distance ride-sharing app connecting riders and independent drivers between Limpopo and Gauteng.',
     highlights: [
-      'Designed and built the mobile app, API, database, payment flow, operations console and company website.',
-      'Own releases, backups, monitoring and the Google Play listing.',
+      'Built the React Native (Expo, TypeScript) app for Android and iOS, the Node.js, Express and Prisma API on PostgreSQL, and a Next.js administration dashboard.',
+      'Made seat booking safe under concurrent requests with database transactions, guarded seat allocation and constraints against duplicate bookings and overselling.',
+      'Integrated Google Maps route previews, push notifications, Ozow platform-fee payments with reconciliation, and email and SMS verification.',
+      'Published on Google Play and the Apple App Store, and reached 150 registered users after the first public release on 15 October 2026.',
     ],
-  },
-  {
-    organisation: 'Sima Digital Agencies',
-    title: 'Software Developer, Work Integrated Learning',
-    period: 'Apr 2025 – Dec 2025',
-    summary: 'Production features for client web applications in an Agile team, with sprint planning and code review.',
-    highlights: [
-      'Reduced average page load time by 23% across core routes by improving server-side rendering and query efficiency.',
-      'Cut the frontend defect rate by 15% by fixing UI issues raised in sprints and QA.',
-      'Built reusable React components with the Next.js App Router and TypeScript over REST APIs and PostgreSQL.',
-    ],
-  },
-  {
-    organisation: 'Tirisano Education Institute',
-    title: 'Volunteer data visualisation intern',
-    period: 'Sep 2025 – Jan 2026',
-    summary: 'Turned programme data into reports for stakeholders.',
-    highlights: ['Analysed programme data in Excel and mapped organisational networks in Kumu and Neo4j.'],
   },
 ];
 
 export const education: { name: string; detail: string; year: string }[] = [
-  { name: 'Diploma in Information Technology (NQF 6)', detail: 'Richfield Graduate Institute of Technology', year: '2025' },
-  { name: 'FNB App Academy', detail: 'Full-stack development programme', year: '2025' },
+  { name: 'Diploma in Information Technology (NQF 6)', detail: 'Richfield Graduate Institute of Technology. Programming 89%, Information Systems 88%, Human Computer Interaction 86%', year: '2023 – 2025' },
+  { name: 'National Senior Certificate', detail: 'New Era College', year: '2022' },
 ];
 
 /** Grouped by what the tools are used for, each with where it was actually used. */

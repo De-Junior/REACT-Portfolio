@@ -7,7 +7,7 @@ const buttonBase =
   'inline-flex h-11 items-center justify-center gap-2 rounded-lg px-5 text-[0.9375rem] font-medium transition-[background-color,border-color,color,transform] duration-200 active:translate-y-px';
 
 const buttonVariants = {
-  primary: 'bg-ink text-canvas hover:bg-ink/85',
+  primary: 'bg-routeclub text-white hover:bg-routeclub/90',
   secondary: 'border border-line-strong text-ink hover:border-ink/40 hover:bg-subtle',
 } as const;
 

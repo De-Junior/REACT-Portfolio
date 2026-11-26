@@ -1,8 +1,8 @@
 type Node = { name: string; detail: string };
 
 const clients: Node[] = [
-  { name: 'Android app', detail: 'React Native, Expo' },
-  { name: 'Operations console', detail: 'Next.js on Vercel' },
+  { name: 'Android and iOS app', detail: 'React Native, Expo' },
+  { name: 'Admin dashboard', detail: 'Next.js on Vercel' },
   { name: 'Website', detail: 'Next.js on Vercel' },
 ];
 
@@ -12,7 +12,7 @@ const services: Node[] = [
   { name: 'PostgreSQL', detail: 'Supabase, Frankfurt' },
   { name: 'Storage', detail: 'Identity documents' },
   { name: 'Ozow', detail: 'Payments' },
-  { name: 'Twilio', detail: 'SMS codes, SOS' },
+  { name: 'SMSPortal', detail: 'SMS verification' },
   { name: 'Resend', detail: 'Email' },
   { name: 'Firebase', detail: 'Push notifications' },
   { name: 'Sentry', detail: 'Errors and alerts' },

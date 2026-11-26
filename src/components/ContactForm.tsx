@@ -66,7 +66,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex h-11 items-center rounded-lg bg-ink px-5 text-[0.9375rem] font-medium text-canvas transition-colors hover:bg-ink/85 disabled:cursor-wait disabled:opacity-60"
+          className="inline-flex h-11 items-center rounded-lg bg-routeclub px-5 text-[0.9375rem] font-medium text-white transition-colors hover:bg-routeclub/90 disabled:cursor-wait disabled:opacity-60"
         >
           {status === 'sending' ? 'Sending…' : 'Send message'}
         </button>
